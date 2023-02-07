@@ -9,5 +9,6 @@ function zipList(first, second) {
   return retList1;
 }
 console.log(zipList(list1, list2));
- const zipListTheSimpleWay = (first, second) => _.flatten(_.zip(first, second));
+let zipListTheSimpleWay;
+zipListTheSimpleWay = (first, second) => _.flatten(_.zip(first, second));
  console.log(zipListTheSimpleWay(list1, list2));
