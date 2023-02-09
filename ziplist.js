@@ -1,14 +1,15 @@
-const list1 = ['a', 'b', 'c'];
-const list2 = [1, 2, 3];
-function zipList(first, second) {
-  const retList = [];
-  let retList1 = retList;
-  for (let i = 0; i < first.length; i++) {
-    retList1.push(first[i], second[i]);
+function ziplist(x,y){
+  let combine = [];
+
+  for(let i  =0 ; i <= x.length + 1; i++) {
+    combine.push(_.first(x));
+    combine.push(_.first(y));
+    x.shift();
+    y.shift();
   }
-  return retList1;
+  return combine;
+
 }
-console.log(zipList(list1, list2));
-let zipListTheSimpleWay;
-zipListTheSimpleWay = (first, second) => _.flatten(_.zip(first, second));
- console.log(zipListTheSimpleWay(list1, list2));
+const list1 = ['a', 'b','c'];
+const list2 = ['1', '2', '3'];
+console.log(ziplist(list1, list2));
